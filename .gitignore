@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+*.log
+*.pem
+
+**/gateway_files/*
+
+**/.DS_Store
+
+# Ignore everything in hummingbot_files
+hummingbot_files/*
+
+# But un-ignore the specific paths
+!hummingbot_files/scripts/
+
+# Special treatment for nested paths
+!hummingbot_files/conf/
+hummingbot_files/conf/*
+!hummingbot_files/conf/strategies/
+
+!hummingbot_files/hummingbot/
+hummingbot_files/hummingbot/*
+!hummingbot_files/hummingbot/strategy/
+!hummingbot_files/hummingbot/templates/

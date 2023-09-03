@@ -1,0 +1,66 @@
+########################################################
+###       Dynamic Grid strategy config         ###
+########################################################
+
+template_version: 22
+strategy:
+
+# Exchange and token parameters.
+exchange:
+
+# Token trading pair for the exchange, e.g. BTC-USDT
+market:
+
+# Number of levels on grid
+n_levels:
+
+# Price at ceiling of grid (top most order)
+grid_price_ceiling:
+
+# Price at flow of grid (bottom most order)
+grid_price_floor:
+
+# Bid/Ask spread for initial order to adjust inventory according to grid level
+start_order_spread:
+
+# Time in seconds before cancelling and placing new start order.
+# If the value is 60, the bot cancels active orders and placing new ones after a minute.
+# For start order
+order_refresh_time:
+
+# Time in seconds before replacing existing order with new orders at the same price.
+# For start order
+max_order_age:
+
+# The spread (from mid price) to defer order refresh process to the next cycle.
+# (Enter 1 to indicate 1%), value below 0, e.g. -1, is to disable this feature - not recommended.
+# For start order
+order_refresh_tolerance_pct:
+
+# Size of your bid and ask order.
+order_amount:
+
+# Scale factor for grid spread
+spread_scale_factor:
+
+# Scale factor for order amount
+amount_scale_factor:
+
+# Whether to enable order optimization mode (true/false).
+# For start order
+order_optimization_enabled:
+
+# The depth in base asset amount to be used for finding top ask (for order optimization mode).
+# For start order
+ask_order_optimization_depth:
+
+# The depth in base asset amount to be used for finding top bid (for order optimization mode).
+# For start order
+bid_order_optimization_depth:
+
+#Take order if they cross order book when external price source is enabled
+# For start order
+take_if_crossed:
+
+# If the strategy should wait to receive cancellations confirmation before creating new orders during refresh time
+should_wait_order_cancel_confirmation: true
